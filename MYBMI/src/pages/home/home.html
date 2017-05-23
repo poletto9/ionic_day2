@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="alcon-green">
+    <ion-title>
+      คำนวณ BMI
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input type="text" placeholder="น้ำหนัก(kg)" [(ngModel)]="weight"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" placeholder="ส่วนสูง(cm)" [(ngModel)]="height"></ion-input>
+  </ion-item>
+
+
+  <div padding>
+    <button ion-button block color="secondary" (click)="calBmi()">ตกลง</button>
+  </div>
+
+
+  <ion-card>
+    <ion-card-header>
+     <ion-icon name="logo-apple" color="primary"></ion-icon> ผลการคำนวณ 
+     <ion-badge >{{bmi |number:'1.2-2'}}</ion-badge>
+    </ion-card-header>
+    <ion-card-content>
+      <p>ดัชนีมวลกายน้อยกว่า 18.5 ให้ถือว่าน้ำหนักน้อยกว่าปกติ</p>
+      <p>ดัชนีมวลกายระหว่าง 18.5 และ 24.9 เป็นน้ำหนักปกติ</p>
+      <p>ดัชนีมวลกายระหว่าง 25 และ 29.9 เป็นน้ำหนักเกิน</p>
+      <p>ดัชนีมวลกายมากกว่า 30 เป็นน้ำหนักอ้วน</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
