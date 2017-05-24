@@ -38,6 +38,7 @@ export class UsersPage {
     })
   }
 
+  // เรียกหน้า detail โดยส่งพารามิเตอร์แบบ object ไปด้วย
   userDetail(key_obj){
     this.navCtrl.push('UserDetailPage',{data:key_obj});
   }
